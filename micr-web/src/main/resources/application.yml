@@ -1,0 +1,31 @@
+#tomcat端口号 和 tomcat的ApplicationContext配置
+server:
+  port: 8081
+  servlet:
+    context-path: /licai
+
+
+#Thymeleaf的配置
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+
+    #dubbo名称
+  application:
+    name: dubbo-micr-web-consumer
+
+
+#micr-web消费者的dubbo配置
+#dubbo组件扫描器
+#dubbo注册中心
+
+
+dubbo:
+  scan:
+    base-packages: com.bjpowernode
+  registry:
+    address: zookeeper://localhost:2181

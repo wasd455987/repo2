@@ -1,0 +1,33 @@
+#dubbo\u7684\u63D0\u4F9B\u8005
+#dubbo\u540D\u79F0
+#dubbo\u7AEF\u53E3\u53F7\u548C\u534F\u8BAE
+#dubbo\u7EC4\u4EF6\u626B\u63CF\u5668
+#dubbo\u6CE8\u518C\u4E2D\u5FC3
+
+spring:
+  application:
+    name: dubbo-micr-dataservice-provider
+
+
+#mysql\u6570\u636E\u6E90\u914D\u7F6E
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/licai?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+dubbo:
+  protocol:
+    port: 20880
+    name: dubbo
+  scan:
+    base-packages: com.bjpowernode
+  registry:
+    address: zookeeper://localhost:2181
+
+#mybatis\u914D\u7F6E
+#mapper-locations: classpath:/mappers/**/*.xml \u901A\u77E5SpringBoot\u5BB9\u5668mapper.xml\u7684\u4F4D\u7F6E
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.bjpowernode.licai.model
+  mapper-locations: classpath:/mappers/**/*.xml

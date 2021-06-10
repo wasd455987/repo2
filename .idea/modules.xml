@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ClassLoaderTestMoudle/ClassLoaderTestMoudle.iml" filepath="$PROJECT_DIR$/ClassLoaderTestMoudle/ClassLoaderTestMoudle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micr-common/micr-common.iml" filepath="$PROJECT_DIR$/micr-common/micr-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micr-dataservice/micr-dataservice.iml" filepath="$PROJECT_DIR$/micr-dataservice/micr-dataservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micr-interface/micr-interface.iml" filepath="$PROJECT_DIR$/micr-interface/micr-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micr-parents/micr-parents.iml" filepath="$PROJECT_DIR$/micr-parents/micr-parents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/micr-web/micr-web.iml" filepath="$PROJECT_DIR$/micr-web/micr-web.iml" />
+    </modules>
+  </component>
+</project>

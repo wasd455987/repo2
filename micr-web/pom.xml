@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+        <relativePath/>
+    </parent>-->
+
+    <parent>
+        <groupId>com.bjpowernode</groupId>
+        <artifactId>micr-parents</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../micr-parents</relativePath>
+    </parent>
+
+    <artifactId>micr-web</artifactId>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--因为micr-web肯定要使用实体类，因此引入micr-interface依赖-->
+        <dependency>
+            <groupId>com.bjpowernode</groupId>
+            <artifactId>micr-interface</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--micr-web模块中肯定需要肯定需要工具类模块，因此引入工具类模块依赖-->
+        <dependency>
+            <groupId>com.bjpowernode</groupId>
+            <artifactId>micr-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--web项目还需要引入SpringBoot整合SpringMVC依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--web项目还需要引入SpringBoot整合Thymeleaf依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!--配置dubbo-->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--配置dubbo-dependencies-zookeeper-->
+        <!--因为父模块中已经对slf4j-log4j12进行了屏蔽，因此子模块中无需进行屏蔽-->
+        <!--<type>pom</type>别忘了写-->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-dependencies-zookeeper</artifactId>
+            <type>pom</type>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
