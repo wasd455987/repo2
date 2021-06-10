@@ -26,4 +26,12 @@ public class Employee {
     @ExcelProperty("毕业院校")
     private String school;
 
+    public Employee(Integer id, Integer age, String name, String gender, Date workDate, String school) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.gender = gender;
+        this.workDate = workDate;
+        this.school = school;
+    }
 }
