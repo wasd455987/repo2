@@ -34,4 +34,34 @@ public class Employee {
         this.workDate = workDate;
         this.school = school;
     }
+
+    public Employee setId(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    public Employee setAge(Integer age) {
+        this.age = age;
+        return this;
+    }
+
+    public Employee setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Employee setGender(String gender) {
+        this.gender = gender;
+        return this;
+    }
+
+    public Employee setWorkDate(Date workDate) {
+        this.workDate = workDate;
+        return this;
+    }
+
+    public Employee setSchool(String school) {
+        this.school = school;
+        return this;
+    }
 }
